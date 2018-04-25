@@ -1,0 +1,100 @@
+.header{
+    position: relative;
+
+    background-image: linear-gradient(to right bottom,
+    rgba($color-tertiary-light, 0.788),
+    rgba($color-tertiary-dark, 0.699) 
+     ),
+     url('../img/hero4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    
+
+
+    height: 95vh;
+    clip-path: polygon(0 0, 100% 0 , 100% 75vh , 0 100%);
+    -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+
+   &__logo-box{
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    
+   &__logo{
+        width: 4.5rem;
+    }
+    
+    
+   &__text-box{
+        position: absolute;
+        top:40%;
+        left:50%;
+        transform: translate(-50%,-50%);
+       
+        text-align: center;
+    }
+}
+
+
+
+
+
+.scroll-btn {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+    text-align: center;
+    margin-top: 8rem;
+    color:$color-grey-light-2;
+   
+    animation: shortMoveInButton .8s ease-in 1.7s;
+    animation-fill-mode: backwards;
+}
+.scroll-btn > * {
+	display: inline-block;
+	line-height: 18px;
+	font-size: 13px;
+	font-weight: normal;
+	color:$color-grey-light-2;
+
+	letter-spacing: 2px;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *.active {
+	color: $color-white;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *:active,
+.scroll-btn > *.active {
+    
+    color: $color-white;
+}
+.scroll-btn .mouse {
+	position: relative;
+	display: block;
+	width: 35px;
+	height: 55px;
+	margin: 0 auto 20px;
+	border: 1.3px solid $color-grey-light-2;
+	border-radius: 23px;
+}
+.scroll-btn .mouse > * {
+	position: absolute;
+	display: block;
+	top: 29%;
+	left: 60%;
+	width: .4rem;
+	height: 8px;
+	margin: -4px 0 0 -4px;
+	background: $color-grey-light-2;
+	border-radius: 50%;
+	-webkit-animation: ani-mouse 2.5s linear infinite;
+	-moz-animation: ani-mouse 2.5s linear infinite;
+	animation: ani-mouse 2.5s linear infinite;
+}

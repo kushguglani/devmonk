@@ -1,0 +1,88 @@
+.section-about{
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -20vh; 
+}
+
+.section-how-it-works{
+    background-image: linear-gradient(to right bottom,
+    rgba($color-tertiary-light, 0.71),
+    rgba($color-tertiary-dark, 0.89) 
+     ),
+     url('../img/hero10.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    perspective: 150rem;
+    padding: 20rem 0;
+
+    margin-top: -10rem;
+    transform: skewY(-7deg);
+    
+    &>*{
+        transform: skewY(7deg);
+        
+    }
+}
+
+.section-work{
+    background-color: rgba($color-grey-light-2,.65);
+    padding: 25rem 0 10rem 0;
+    margin-top: -10rem;
+}
+
+
+.section-progress{
+    // background-image: linear-gradient(to right bottom,
+    // $color-tertiary-light,
+    // $color-tertiary-dark);
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    
+    // padding: -16rem 0;
+
+    margin-top: -10rem;
+    // transform: skewY(7deg);
+    
+    // &>*{
+    //     transform: skewY(-7deg);
+        
+    // }
+    
+    
+}
+.section-team{
+    background-color: $color-grey-light-1;
+    padding: 25rem 0 25rem 0;
+    margin-top: -15rem;
+}
+.section-stories{
+   
+    padding: 15rem 0;
+    position: relative;
+}
+
+.section-engage{
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark);
+}
+.engage{
+    background-image: linear-gradient(105deg,
+    rgba($color-grey-light-2,0.9) 0%,
+    rgba($color-grey-light-1,0.9) 50%,
+    transparent 50%),
+    url('../img/engage.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 58rem;
+    border-radius: .3rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black,.26);
+
+
+    &__form{
+        width: 50%;
+        padding:4rem;
+    }
+}

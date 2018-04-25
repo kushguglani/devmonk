@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "dev champs portfolio ",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Abhinava Sanyal",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.8.3"
+  }
+}

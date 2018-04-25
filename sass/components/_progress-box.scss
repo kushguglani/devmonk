@@ -1,0 +1,31 @@
+.progress-box{
+    text-align: center;
+    padding: 2.5rem;
+    font-size: 1.5rem;
+    transition: transform .3s;
+
+
+    &__image{
+       display: inline-block;
+       width: 50%;
+       height: auto;
+        margin-bottom: .5rem;
+        display: inline-block;
+       
+
+    }
+
+    &:hover {
+      
+
+    }
+    &:hover  &__icon{
+      
+        
+        
+    }
+    
+  
+
+
+}

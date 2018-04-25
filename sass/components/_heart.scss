@@ -1,0 +1,10 @@
+.heart{
+    color: red;
+    display:inline-block;
+
+    &__beating{
+        display:inline-block;
+        animation: beat .6s infinite;
+      
+    }
+}

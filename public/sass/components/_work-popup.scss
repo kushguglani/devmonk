@@ -1,4 +1,4 @@
-.popup {
+.work-popup {
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -14,70 +14,60 @@
     &__content {
         @include absCenter;
         position: relative;
-        width: 75%;
-        
+        width: 95%;
+        height: 95%;
+        display: inline-block;
         background-color: $color-white;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         border-radius: 3px;
-        display: table;
+       padding: 3rem;
         overflow: hidden;
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
+        @include clearfix;
     }
 
     &__left {
-        width: 33.333333%;
-        display: table-cell;
-        padding: 1.5rem; 
-        
-      &--1{
-          width: 100%;
-          height: 34rem;
-          border-radius: .3rem;
-        }
-        
-        &--2{
-            background-color: $color-grey-light-2;
-            padding: 4rem;
-            margin-top: 4rem;
-            border-radius: .3rem;
-        }
+     float: left; 
+    
      
     }
 
     &__right {
-        width: 66.666666%;
-        display: table-cell;
-        vertical-align: middle;
-        padding: 3rem 5rem;
-        background-color:$color-grey-light-1;
+     position: absolute;
+     top: 3rem;
+     right: 10rem;
+     padding-top : 9rem;
+
+
     }
 
-    &__img {
-        display: block;
-        width: 100%;
-        
-   
+    &__description{
+        padding: 2rem 3rem;
+        width: 60%;
+    }
+    &__icon{
+      font-size: 3rem;
+      shape-outside: circle;
+      color:$color-tertiary-light;
+      padding: 2rem 2rem;
+       float:left;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+     
+    }
+    &__btn{
+        position: absolute;
+        bottom: -15rem;
+        right: 7.5rem;
     }
 
-    // &__body {
-    //     font-size: 1.4rem;
-    //     margin-bottom: 4rem;
-
-    //     -moz-column-count: 2;
-    //     -moz-column-gap: 4rem; //1em = 14px;
-    //     -moz-column-rule: 1px solid $color-grey-light-2;
-
-    //     column-count: 2;
-    //     column-gap: 4rem; //1em = 14px;
-    //     column-rule: 1px solid $color-grey-light-2;
-
-    //     -moz-hyphens: auto;
-    //     -ms-hyphens: auto;
-    //     -webkit-hyphens: auto;
-    //     hyphens: auto;
-    // }
+    &__heading{
+        position: absolute;
+        top: .5rem;
+        right: 2.5rem;
+    }
 
     //Open states
     &:target {
@@ -95,7 +85,7 @@
         &:visited {
             color: $color-grey-light-3;
             position: absolute;
-            top: 2.5rem;
+            top: .5rem;
             right: 2.5rem;
             font-size: 3rem;
             text-decoration: none;

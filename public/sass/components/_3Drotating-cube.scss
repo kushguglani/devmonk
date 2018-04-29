@@ -1,0 +1,131 @@
+
+.perspective {
+    perspective: 76em;
+	perspective-origin: 50% 50px;
+  width: 496px;
+  margin: 0 auto;
+  color:$color-grey-light-3;
+  text-align: center;
+}
+input {
+  display: none;
+
+}
+.tab {
+  position: absolute;
+  width: 8rem;
+  height: 7rem;
+  background: pink;
+  color:$color-white;
+  right: 0;
+  line-height: 70px;
+  font-weight: 300;
+  cursor: pointer;
+  &:nth-child(1) { 
+    top: -5px;
+    background-image:linear-gradient(to right bottom ,
+    $color-tertiary-light,
+    $color-tertiary-dark) ;
+  }
+  &:nth-child(2) {
+    top: 69px;
+    background-image:linear-gradient(to right bottom ,
+                $color-secondary-light,
+                $color-secondary-dark); 
+  }
+  &:nth-child(3) {
+    top: 143px;
+    background-image:linear-gradient(to right bottom ,
+    $color-quad-light,
+    $color-quad-dark) ;
+  }
+}
+
+.cube {
+  position: relative;
+  margin: 60px auto 0;
+  width: 300px;
+  height: 200px;
+  transform-origin: 0 100px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in;
+
+  &__title{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: 1.1rem;
+    color: $color-grey-light-0;
+    background-color: $color-grey-dark-3;
+    text-align: left;
+    padding: .4rem 2rem;
+    clip-path: polygon(0 0, 100% 0 , 90% 100% , 0 100%);
+
+  }
+
+
+  
+  &__body{
+    padding: 3rem .2rem;
+    
+  }
+  &-tech{
+
+    float: left;
+    padding: 2rem;
+  }
+  &__icon{
+    font-size: 3rem;
+    color: $color-quad-dark;
+  }
+  
+  &__icon-title{
+    float: bottom;
+    color: $color-grey-dark-2;
+  }
+}
+.tab-content {
+  width: 300px;
+  height: 200px;
+ 
+  position: absolute;
+  
+  h1 {
+    font-size: 25px;
+    margin: 75px 0 10px;
+    font-weight: 300;
+  }
+  p {
+    font-size: 12px;
+  }
+  &:nth-child(2) {
+    transform: translateZ(100px);
+    background:$color-grey-light-2;
+
+  }
+  &:nth-child(1) {
+    transform: rotateX(-270deg)
+               translateY(-100px);
+    transform-origin: top left;
+    background:$color-grey-light-2;
+  }
+  &:nth-child(3) {
+    transform: rotateX(-90deg)
+               translateY(100px);
+    transform-origin: bottom center;
+    background: $color-grey-light-2;
+  } 
+}
+
+#tab-top:checked ~ .cube {
+  transform: rotateX(-90deg);
+}
+#tab-front:checked ~ .cube {
+  transform: rotateX(0deg);
+}
+#tab-bottom:checked ~ .cube {
+  transform: rotateX(90deg);
+}
